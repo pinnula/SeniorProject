@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.css.map">
+        <link rel="stylesheet" href="assets/jquerymobile/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/jumbotron.css">
+        <script src="assets/js/jquery-2.1.3.min.js"></script>
+        <script src="assets/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.js"></script>
+        <script src="assets/js/navbar.js"></script>
+        
+        <style>
+            span.ex{
+                font-size: 20px;
+                padding-top: 5%;
+            }
+        </style>
+    </head>
+    
+        
+    
+    <body>
+        <!--start navigator bar-->
+        <div class="navbar navbar-color navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-toggle"> 
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="navbar-brand" style="color: white;font-size: 140%" href="#">ประวัติเจ้าของ</a>
+                </div>
+                <div id="slidemenu">
+
+                    <form class="navbar-form navbar-right" role="form">
+                        <div class="form-group">
+                            <input type="search" placeholder="search" class="form-control">
+                        </div>
+                    </form>
+
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown"> 
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 120%">ประวัติ<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="showuserprofile.html">ประวัติเจ้าของ</a></li>
+                                <li><a href="showdogprofile.html">ประวัติสุนัข</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" style="font-size: 120%">บทความ</a></li>
+                        <li><a href="#" style="font-size: 120%">ขอรับเลือด</a></li>
+                        <li><a href="#" style="font-size: 120%">ตั้งค่า</a></li>
+                        <li><a href="#" style="font-size: 120%">ถาม/ตอบ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--end navigator bar-->
+
+        <div class="container">    
+            <div role="main" class="ui-content" style="margin-top:30% ">
+                
+                <img src="assets/images/imgupload.jpg" id="userimgtag" class="img-thumbnail"> 
+                
+                <span class="col-xs-7 ex">ชื่อ:</span> 
+                <span id="firstname" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">นามสกุล:</span> 
+                <span id="lastname" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">บ้านเลขที่:</span> 
+                <span id="houseno" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">ตำบล/แขวง:</span> 
+                <span id="sub_district" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">อำเภอ/เขต:</span> 
+                <span id="district" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">จังหวัด:</span> 
+                <span id="province" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">รหัสไปรษณีย์:</span> 
+                <span id="postcode" class="col-xs-5 ex"></span><br>
+                <span class="col-xs-7 ex">เบอร์โทรศัพท์:</span> 
+                <span id="telno" class="col-xs-5 ex"></span><br>
+              
+                 
+                <form id="profileform" method="post" >
+                    <!--<label for="firstname">ชื่อ</label>
+                    <input type="text" name="firstname" id="firstname" />
+                    <label for="lastname">นามสกุล</label>
+                    <input type="text" name="lastname" id="lastname" />
+                    <label for="houseno">บ้านเลขที่</label>
+                    <input type="text" name="houseno" id="houseno" />
+                    <label for="sub_district">ตำบล/แขวง</label>
+                    <input type="text" name="sub_district" id="sub_district" />
+                    <label for="district">อำเภอ/เขต</label>
+                    <input type="text" name="district" id="district" />
+                    <label for="province">จังหวัด</label>
+                    <input type="text" name="province" id="province" />
+                    <label for="postcode">รหัสไปรษณีย์</label>
+                    <input type="number" name="postcode" id="postcode" />
+                    <label for="telno">เบอร์โทรศัพท์</label>
+                    <input type="text" name="telno" id="telno" />-->
+                    
+                    <br>
+                    <div class="pull-right" style="margin-top: 10%" >
+                        <a href="profile.html" class="btn btn-default btn-lg" role="button" style="background-color: #ac2925; color: white">แก้ไข</a>
+                        <a href="main.html" class="btn btn-default btn-lg" role="button" style="background-color: #ac2925; color: white">เมนูหลัก</a>
+                   </div>
+                    
+                </form>
+                
+                
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $.support.cors = true;
+                $("a").attr('data-ajax', false);
+                
+                //Retrieve data
+                var token = window.localStorage.getItem("token");
+                var userdata = JSON.parse(window.localStorage.getItem("userdata"));
+                $("#firstname").html(userdata.firstname);
+                $("#lastname").html(userdata.lastname);
+                $("#houseno").html(userdata.address.houseno);
+                $("#sub_district").html(userdata.address.subdistrict);
+                $("#district").html(userdata.address.district);
+                $("#province").html(userdata.address.province);
+                $("#postcode").html(userdata.address.postcode);
+                $("#telno").html(userdata.telno);
+                if (userdata.user_image != "") {
+                        $("#userimgtag").attr("src", "https://dogblooddonor.in.th/api/userimage/" + userdata.user_image);
+                    }
+            });
+        </script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
